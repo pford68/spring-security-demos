@@ -1,0 +1,19 @@
+<project id="entanglement" name="aurora-entanglement" basedir=".">
+
+    <!-- ====================================================================================
+
+    DESCRIPTION:  Ant scripts for the JavaScript builds.
+    AUTHOR:  Philip Ford
+    COMMENTS:
+
+    =======================================================================================-->
+
+    <property environment="env"/>
+    <property file="build.properties" />
+
+    <target name="deploy-cert-example">
+        <delete file="${dev.deploy.dir}/cert-example.war" />
+        <copy todir="${dev.deploy.dir}" file="cert-example/target/cert-example.war" />
+    </target>
+
+</project>
